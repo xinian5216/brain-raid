@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0e0c;
+  --color-surface: #151a16;
+  --color-surface-2: #1c241e;
+  --color-fg: #e8ece6;
+  --color-muted: #9aa396;
+  --color-subtle: #6d766c;
+  --color-border: #2a332c;
+  --color-accent: #c8d4cc;
+  --color-accent-fg: #0c0e0c;
+  --color-brain: #c45c6a;
+  --color-moon: #c8d4cc;
+  --color-lawn: #2d5a27;
+  --color-rot: #7a9b4a;
+  --font-display: "Pixelify Sans", "IBM Plex Sans", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html,
+  body,
+  #app {
+    height: 100%;
+  }
+
+  html {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    overflow: hidden;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
