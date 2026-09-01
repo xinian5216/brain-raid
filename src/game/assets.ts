@@ -1,3 +1,5 @@
+import { asset } from "./paths";
+
 const SHEETS = [
   "walker",
   "cone",
@@ -41,10 +43,10 @@ export async function loadAssets(): Promise<Assets> {
   const photos = {} as Record<PhotoName, HTMLImageElement>;
   await Promise.all([
     ...SHEETS.map(async (name) => {
-      sheets[name] = await loadImage(`/sprites/${name}.png`);
+      sheets[name] = await loadImage(asset(`sprites/${name}.png`));
     }),
     ...PHOTOS.map(async (name) => {
-      photos[name] = await loadImage(`/sprites/${name}.jpg`);
+      photos[name] = await loadImage(asset(`sprites/${name}.jpg`));
     }),
   ]);
   return { sheets, photos };

@@ -2,6 +2,8 @@
 
 像素风反向塔防：你是僵尸一方。从墓园派出部队，啃穿植物防线，冲进屋子吃掉脑子。
 
+**在线玩：[xinian5216.github.io/brain-raid](https://xinian5216.github.io/brain-raid/)**
+
 电脑横版（屋子在左），手机竖版（屋子在上）。点行道部署僵尸即可。
 
 ## 怎么玩
@@ -27,11 +29,10 @@ npm install
 npm run dev
 ```
 
-浏览器打开提示的地址即可。构建：
+浏览器打开提示的地址即可。静态站构建（GitHub Pages）：
 
 ```bash
-npm run build
-npm run preview
+npm run build:pages
 ```
 
 ## 技术

@@ -11,5 +11,6 @@ assets/
 .node_modules.lock
 .nitro/
 dist/
+dist-pages/
 AGENTS.md
 AGENTS.project.md

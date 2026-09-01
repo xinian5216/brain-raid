@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { House, Moon, Pause, Volume2, VolumeX } from "lucide-react";
 import { NIGHTS, ZOMBIE_ORDER, ZOMBIES, type ZombieId } from "./config";
 import { loadAssets, type Assets } from "./assets";
+import { asset } from "./paths";
 import { GameAudio } from "./audio";
 import { computeLayout, laneAt, renderBoard, type BoardLayout } from "./render";
 import { loadSave, writeSave } from "./save";
@@ -608,7 +609,7 @@ function Picker({
             >
               <span className="h-9 w-9 overflow-hidden">
               <img
-                src={`/sprites/${z.sheet}.png`}
+                src={asset(`sprites/${z.sheet}.png`)}
                 alt=""
                 className="h-[4.5rem] w-[4.5rem] max-w-none -translate-x-1 -translate-y-1"
                 draggable={false}
